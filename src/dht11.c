@@ -2,19 +2,17 @@
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <stdint.h>
-#include "dht11.h"
-#include "writer.h"
+#include "../headers/dht11.h"
+#include "../headers/writer.h"
 #define MAX_TIME 85  
 #define DHT11PIN 7  
 int dht11_val[5]={0,0,0,0,0};  
   
-void dht11_read_val()  
+float * dht11_read_val()  
 {  
   uint8_t lststate=HIGH;  
   uint8_t counter=0;  
-  uint8_t j=0,i;
-  float *data;
-  float farenheit;  
+  uint8_t j=0,i; 
   for(i=0;i<5;i++)  
      dht11_val[i]=0;  
   pinMode(DHT11PIN,OUTPUT);  
@@ -45,13 +43,13 @@ void dht11_read_val()
   }  
   // verify cheksum and print the verified data  
   if((j>=40)&&(dht11_val[4]==((dht11_val[0]+dht11_val[1]+dht11_val[2]+dht11_val[3])& 0xFF)))  
-  {  
-    farenheit=dht11_val[2]*9./5.+32;
-    float humidity = dht11_val[0] + dht11_val[1];
-    float tmp = dht11_val[2] + dht11_val[3];
-    printf("Humidity = %.2f Temperature = %.2f *C (%.2f *F)\n", humidity, tmp,farenheit);
-    writeDHT11Data(humidity, tmp);
+  {
+    float data[2];
+    data[0] = dht11_val[0] + dht11_val[1];
+    data[1] = dht11_val[2] + dht11_val[3];
+    float * pt = &data[0];
+    return pt; 
   }  
   else  
-    printf("Invalid Data!!\n");  
+    return NULL;   
 }

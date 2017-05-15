@@ -18,7 +18,7 @@
 extern "C" {
 #endif
 
-    _Bool writeDHT11Data(float humidity, float tmp);
+    void writeDHT11Data(float humidity, float tmp);
 
 #ifdef __cplusplus
 }

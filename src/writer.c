@@ -7,19 +7,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include"writer.h"
+#include"../headers/writer.h"
 
 #define DHT11DATA_FILE "/home/pi/data/dht11.txt"
 
- _Bool writeDHT11Data(float humidity, float tmp){
+ void writeDHT11Data(float humidity, float tmp){
      FILE *fp;
      char str[80];
      fp = fopen(DHT11DATA_FILE, "a");
      if(fp == NULL) {
-         return false;
+         return;
      }
      sprintf(str, "%.2f, %.2f\n", humidity, tmp);
      fprintf(fp, str);
      fclose(fp);
-     return true;
 }
+ 

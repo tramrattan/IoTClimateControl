@@ -14,7 +14,8 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <wiringPi.h>
-#include "dht11.h"
+#include "../headers/dht11.h"
+#include "../headers/writer.h"
 
 using namespace std;
 
@@ -30,7 +31,12 @@ int main(int argc, char** argv) {
         exit(1);  
     while(1)  
     {  
-        dht11_read_val();
+        float * data = dht11_read_val();
+        if(data != NULL) {
+            float farenheit = data[1]*9./5.+32;
+            writeDHT11Data(data[0], data[1]);
+            printf("Humidity = %.2f Temperature = %.2f *C (%.2f *F)\n", data[0], data[1],farenheit);
+        }
         delay(3000);  
     }  
     

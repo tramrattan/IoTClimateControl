@@ -7,10 +7,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/dht11.c</file>
-            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/main.cpp</file>
-            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/Makefile</file>
-            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/dht11.h</file>
+            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/src/writer.c</file>
+            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/headers/writer.h</file>
+            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/src/main.cpp</file>
+            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/headers/dht11.h</file>
+            <file>rfs://pi@10.49.229.163:22/home/pi/projects/IoTClimateControl/src/dht11.c</file>
         </group>
     </open-files>
 </project-private>

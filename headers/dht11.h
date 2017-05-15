@@ -18,7 +18,7 @@
 extern "C" {
 #endif
 
-void dht11_read_val();
+float * dht11_read_val();
 
 
 #ifdef __cplusplus

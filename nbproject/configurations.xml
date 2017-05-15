@@ -4,8 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>dht11.h</itemPath>
-      <itemPath>writer.h</itemPath>
+      <itemPath>headers/dht11.h</itemPath>
+      <itemPath>headers/writer.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -14,9 +14,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>dht11.c</itemPath>
-      <itemPath>main.cpp</itemPath>
-      <itemPath>writer.c</itemPath>
+      <itemPath>src/dht11.c</itemPath>
+      <itemPath>src/main.cpp</itemPath>
+      <itemPath>src/writer.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -46,15 +46,15 @@
           <commandLine>-lwiringPi</commandLine>
         </linkerTool>
       </compileType>
-      <item path="dht11.c" ex="false" tool="0" flavor2="0">
+      <item path="headers/dht11.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="dht11.h" ex="false" tool="3" flavor2="0">
+      <item path="headers/writer.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/dht11.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="writer.c" ex="false" tool="0" flavor2="0">
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="writer.h" ex="false" tool="3" flavor2="0">
+      <item path="src/writer.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -77,15 +77,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="dht11.c" ex="false" tool="0" flavor2="0">
+      <item path="headers/dht11.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="dht11.h" ex="false" tool="3" flavor2="0">
+      <item path="headers/writer.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/dht11.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="writer.c" ex="false" tool="0" flavor2="0">
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="writer.h" ex="false" tool="3" flavor2="0">
+      <item path="src/writer.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>
